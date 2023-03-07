@@ -77,7 +77,7 @@ imprimir();
 
 while (pilha.Count != 0) 
 {
-    pilha.Pop();
+    Console.WriteLine($"Removendo {pilha.Pop()}");
     imprimir();
 }
 
