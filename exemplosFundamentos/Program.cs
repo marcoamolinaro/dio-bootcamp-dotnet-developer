@@ -40,4 +40,28 @@ pessoa.Apresentar(); */
 //     Console.WriteLine("Chegou até aqui!");
 // }
 
-new ExemploExcecao().Metodo1();
+//new ExemploExcecao().Metodo1();
+
+Queue<int> fila = new Queue<int>();
+
+fila.Enqueue(2);
+fila.Enqueue(4);
+fila.Enqueue(6);
+fila.Enqueue(8);
+
+imprimir();
+
+while (fila.Count != 0) 
+{
+    fila.Dequeue();
+    imprimir();
+}
+
+void imprimir() 
+{
+    Console.WriteLine("=========");
+    foreach (int item in fila)
+    {
+        Console.WriteLine(item);
+    }
+}
