@@ -66,27 +66,64 @@ pessoa.Apresentar(); */
 //     }
 // }
 
-Stack<int> pilha = new Stack<int>();
+// Stack<int> pilha = new Stack<int>();
 
-pilha.Push(4);
-pilha.Push(6);
-pilha.Push(8);
-pilha.Push(10);
+// pilha.Push(4);
+// pilha.Push(6);
+// pilha.Push(8);
+// pilha.Push(10);
 
-imprimir();
+// imprimir();
 
-while (pilha.Count != 0) 
+// while (pilha.Count != 0) 
+// {
+//     Console.WriteLine($"Removendo {pilha.Pop()}");
+//     imprimir();
+// }
+
+
+// void imprimir()
+// {
+//     Console.WriteLine("======");
+//     foreach (int item in pilha)
+//     {
+//         Console.WriteLine(item);
+//     }
+// }
+
+Dictionary<string, string> estados = new Dictionary<string, string>();
+
+estados.Add("SP", "São Paulo");
+estados.Add("RJ", "Rio de Janeiro");
+estados.Add("BA", "Bahia");
+estados.Add("MG", "Minas Gerais");
+
+//foreach (var item in estados) - Pode usar o tipo como sendo var que ele reconhece como um KeyValuePair
+foreach (KeyValuePair<string, string> item in estados)
 {
-    Console.WriteLine($"Removendo {pilha.Pop()}");
-    imprimir();
+    Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
 }
 
+Console.WriteLine("=======================");
 
-void imprimir()
+//estados.Remove("BA");
+estados["SP"] = "Piracicaba";
+
+foreach (var item in estados)
 {
-    Console.WriteLine("======");
-    foreach (int item in pilha)
-    {
-        Console.WriteLine(item);
-    }
+    Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
 }
+
+string chave = "BA";
+Console.WriteLine($"Verificando se o elemento {chave} já existe");
+
+if (estados.ContainsKey(chave))
+{
+    Console.WriteLine("Valor existente");
+}
+else 
+{
+    Console.WriteLine("Valor não existe");
+}
+
+Console.WriteLine(estados["RJ"]);
