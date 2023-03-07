@@ -42,25 +42,50 @@ pessoa.Apresentar(); */
 
 //new ExemploExcecao().Metodo1();
 
-Queue<int> fila = new Queue<int>();
+// Queue<int> fila = new Queue<int>();
 
-fila.Enqueue(2);
-fila.Enqueue(4);
-fila.Enqueue(6);
-fila.Enqueue(8);
+// fila.Enqueue(2);
+// fila.Enqueue(4);
+// fila.Enqueue(6);
+// fila.Enqueue(8);
+
+// imprimir();
+
+// while (fila.Count != 0) 
+// {
+//     fila.Dequeue();
+//     imprimir();
+// }
+
+// void imprimir() 
+// {
+//     Console.WriteLine("=========");
+//     foreach (int item in fila)
+//     {
+//         Console.WriteLine(item);
+//     }
+// }
+
+Stack<int> pilha = new Stack<int>();
+
+pilha.Push(4);
+pilha.Push(6);
+pilha.Push(8);
+pilha.Push(10);
 
 imprimir();
 
-while (fila.Count != 0) 
+while (pilha.Count != 0) 
 {
-    fila.Dequeue();
+    pilha.Pop();
     imprimir();
 }
 
-void imprimir() 
+
+void imprimir()
 {
-    Console.WriteLine("=========");
-    foreach (int item in fila)
+    Console.WriteLine("======");
+    foreach (int item in pilha)
     {
         Console.WriteLine(item);
     }
